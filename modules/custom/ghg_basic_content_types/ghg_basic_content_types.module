@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the GHG Basic Content Types feature.
+ */
+
+include_once 'ghg_basic_content_types.features.inc';
