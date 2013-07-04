@@ -34,4 +34,10 @@ dependencies[] = token
 dependencies[] = views
 dependencies[] = views_ui
 
+; custom
+
+dependencies[] = ghg_basic_content_types
+dependencies[] = ghg_common
+dependencies[] = ghg_display
+
 files[] = ghg.profile
