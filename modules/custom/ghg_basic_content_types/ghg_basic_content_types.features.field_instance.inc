@@ -17,6 +17,15 @@ function ghg_basic_content_types_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'brief' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -60,6 +69,16 @@ function ghg_basic_content_types_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'brief' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'medium',
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'image',

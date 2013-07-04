@@ -5,3 +5,44 @@
  */
 
 include_once 'ghg_basic_content_types.features.inc';
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function ghg_basic_content_types_entity_info_alter(&$entity_info) {
+  $entity_info['node']['view modes']['brief'] = array(
+    'label' => t('Brief'),
+    'custom settings' => TRUE,
+  );
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function ghg_basic_content_types_block_info() {
+  $blocks['footer'] = array(
+    'info' => t('Footer'),
+    'cache' => DRUPAL_NO_CACHE
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function ghg_basic_content_types_block_view($delta = '') {
+  switch ($delta) {
+    case 'footer':
+      $block['content'] = ghg_basic_content_types_footer();
+      break;
+  }
+  
+  return $block;
+}
+
+function ghg_basic_content_types_footer() {
+  $items = array(
+    '#markup' => "©2011 Gamers Helping Gamers",
+  );
+  return $items;
+}

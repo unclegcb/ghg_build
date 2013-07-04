@@ -1,6 +1,7 @@
 name = GHG Basic Content Types
 core = 7.x
 package = Features
+php = 5.2.4
 version = 7.x-0.1
 project = ghg_basic_content_types
 dependencies[] = ctools
@@ -21,4 +22,4 @@ features[variable][] = menu_parent_page
 features[variable][] = node_options_page
 features[variable][] = node_preview_page
 features[variable][] = node_submitted_page
-project path = profiles/ghg/modules/custom/
+project path = profiles/ghg/modules/custom
