@@ -9,6 +9,9 @@ core = 7.x
 ; Contrib Modules
 ;-----------------------------------------
 
+; addressfield
+;projects[addressfield][version] = ""
+projects[addressfield][subdir] = "contrib"
 
 ; admin_menu requires bean
 ;projects[admin_menu][version] = ""
