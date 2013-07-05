@@ -15,6 +15,13 @@ function ghg_applications_ctools_plugin_api() {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function ghg_applications_views_api() {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function ghg_applications_node_info() {
@@ -24,7 +31,7 @@ function ghg_applications_node_info() {
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Name'),
       'help' => '',
     ),
   );

@@ -8,6 +8,7 @@ project = ghg_common
 dependencies[] = addressfield
 dependencies[] = ctools
 dependencies[] = features
+dependencies[] = menu
 dependencies[] = number
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1

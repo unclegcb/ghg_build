@@ -165,6 +165,32 @@ function ghg_applications_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
+  // Exported field_base: 'field_status'
+  $field_bases['field_status'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_status',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Incomplete' => 'Incomplete',
+        'Submitted' => 'Submitted',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_transcript'
   $field_bases['field_transcript'] = array(
     'active' => 1,

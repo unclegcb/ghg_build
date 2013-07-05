@@ -10,56 +10,6 @@
 function ghg_applications_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-application-body'
-  $field_instances['node-application-body'] = array(
-    'bundle' => 'application',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'brief' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => TRUE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 2,
-    ),
-  );
-
   // Exported field_instance: 'node-application-field_essay_1'
   $field_instances['node-application-field_essay_1'] = array(
     'bundle' => 'application',
@@ -344,6 +294,53 @@ function ghg_applications_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-application-field_status'
+  $field_instances['node-application-field_status'] = array(
+    'bundle' => 'application',
+    'default_value' => array(
+      0 => array(
+        'value' => 'Incomplete',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Your application will not be submitted until you change this field to "submitted" and Save.',
+    'display' => array(
+      'brief' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_status',
+    'label' => 'Submission Status',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 10,
+    ),
+  );
+
   // Exported field_instance: 'node-application-field_transcript'
   $field_instances['node-application-field_transcript'] = array(
     'bundle' => 'application',
@@ -394,7 +391,6 @@ function ghg_applications_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Body');
   t('Essay 1');
   t('Essay 2');
   t('Essay 3');
@@ -403,11 +399,13 @@ function ghg_applications_field_default_field_instances() {
   t('Personal statement that touches on: (1) your background in magic, the role magic has had in your life, and why you would be a good recipient; and (2) your future academic and career goals.');
   t('SAT/ACT Score');
   t('Student Aid Report');
+  t('Submission Status');
   t('Upload a PDF copy of your Student Aid Report from the <a href="http://www.fafsa.ed.gov/">Free Application for Federal Student Aid (FAFSA)</a>.');
   t('Upload a transcript in PDF format. If you need to upload multiple transcripts for any reason, you may add another field here.');
   t('What are some of your Magic Achievements?');
   t('What is your favorite magic card or mechanic and why?');
   t('What is your least favorite magic card or mechanic and why?');
+  t('Your application will not be submitted until you change this field to "submitted" and Save.');
 
   return $field_instances;
 }
